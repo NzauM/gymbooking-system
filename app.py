@@ -13,7 +13,7 @@ migrate = Migrate(app, db)
 
 @app.route('/')
 def welcome():
-    return "<h1>Flask App Running Smoothly.....</h1>"
+    return "<h1>Flask App Not Running Smoothly.....</h1>"
 
 @app.route('/create_trainer', methods=['POST'])
 def create_trainer():
