@@ -36,6 +36,12 @@ def get_trainer(trainer_id):
     resp = make_response(trainer.to_dict(), 200)
     return resp
 
+@app.route('/trainers')
+def get_trainers():
+    trainers = db.session.query(Trainer).all()
+    trainer_list = [trainer.to_dict() for trainer in trainers]
+    resp = make_response({'trainers'})
+
 
 
 
